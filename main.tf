@@ -2,7 +2,6 @@ resource "aws_rds_cluster" "default" {
   cluster_identifier      = "aurora-cluster-demo"
   engine                  = var.engine
   engine_version          = var.engine_version
-  availability_zones      = ["us-west-2a", "us-west-2b", "us-west-2c"]
   database_name           = var.database_name
   master_username         = data.aws_ssm_parameter.user.value
   master_password         = data.aws_ssm_parameter.pass.value
