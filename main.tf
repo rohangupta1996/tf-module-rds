@@ -11,7 +11,7 @@ resource "aws_rds_cluster" "main" {
 
   tags = merge(
     var.tags,
-    { Name = "${var.env}-subnet-group" }
+    { Name = "${var.env}-rds" }
   )
 }
 
