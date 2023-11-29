@@ -1,5 +1,5 @@
 resource "aws_rds_cluster" "main" {
-  cluster_identifier      = "aurora-cluster-demo"
+  cluster_identifier      = "${var.env}-rds"
   engine                  = var.engine
   engine_version          = var.engine_version
   database_name           = var.database_name
